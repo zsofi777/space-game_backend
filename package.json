@@ -1,0 +1,52 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "lint:fix": "npm run lint -- --fix",
+    "prebuild": "npm run lint && npm run test",
+    "test": "NODE_ENV=test mocha --timeout 200000 test/**/*-test.js --exit",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "mockgoose": "^8.0.2",
+    "mongoose": "^5.4.4",
+    "mongoose-unique-validator": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-restricted-globals": "^0.1.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^3.4.2",
+    "tape": "^4.9.2"
+  },
+  "description": "## Steps",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-fox-academy/ferrilata-infinite-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/green-fox-academy/ferrilata-infinite-backend/issues"
+  },
+  "homepage": "https://github.com/green-fox-academy/ferrilata-infinite-backend#readme"
+}
